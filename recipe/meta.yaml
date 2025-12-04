@@ -1,4 +1,4 @@
-{% set version = "2.5.0" %}
+{% set version = "2.5.1-RC1" %}
 
 package:
   name: muscat-split
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://gitlab.com/drti/muscat/-/archive/{{ version }}/muscat-{{ version }}.tar.bz2
-  sha256: 7f7fa414a67ce3da88ec521673e032321f072e9de4ad1a2632b1de64126f22da
+  sha256: C5C7A2AF1BBC72FA055A6350FF7F6B5F213B4F7B2E0DCB6043D433C08FFFEE83
 
 build:
-  number: 4
+  number: 0
 
 
 outputs:
@@ -36,7 +36,7 @@ outputs:
         - cmake
       host:
         - ninja
-        - python
+        - python >=3.10
         # for the moment numpy 2 is activated only for python 3.13 (numpy 1 not available on py 3.13)
         - numpy >=2.*  # [py >= 313]
         - numpy =1.*  # [py < 313]
@@ -92,7 +92,6 @@ outputs:
         - matplotlib-base
         # pycngs-core only available for python 3.10+
         - pycgns-core  # [py > 39]
-        - pycgns  # [py == 39]
         - mumps-seq   # [not osx]
       imports:
         - Muscat
@@ -126,7 +125,6 @@ outputs:
         - mmgsuite =5.8
         - cvxpy  # [not osx or py!=313 ]
         - pycgns-core  # [py > 39]
-        - pycgns  # [py == 39]
         - mumps-seq   # [not osx]
     test:
       imports:
@@ -178,7 +176,6 @@ outputs:
         - kokkos =4.4.01 h*  # [not linux]
         - mmgsuite =5.8
         - pycgns-core  # [py > 39]
-        - pycgns  # [py == 39]
         - cvxpy  # [not osx or py!=313 ]
     test:
       imports:
