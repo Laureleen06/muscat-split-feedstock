@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.com/drti/muscat/-/archive/{{ version }}/muscat-{{ version }}.tar.bz2
-  sha256: EA6BFA2514A85D1F91F07E97273CB88D997CE60903A08D445AB24D27B9E71DDC
+  sha256: ea6bfa2514a85d1f91f07e97273cb88d997ce60903a08d445ab24d27b9e71ddc
 
 build:
   number: 0
