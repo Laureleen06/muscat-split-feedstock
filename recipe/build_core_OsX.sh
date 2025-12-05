@@ -19,7 +19,8 @@ cmake  ${CMAKE_ARG}                            \
 -D CMAKE_INSTALL_PREFIX=${PREFIX}              \
 -G Ninja                                       \
 -B ${PWD}/${BUILD_DIR}                         \
--S .
+-S .                                           \
+-S ../superbuild/
 
 cmake                          \
 --build ${BUILD_DIR}           \
