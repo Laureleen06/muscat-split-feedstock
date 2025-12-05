@@ -36,7 +36,7 @@ outputs:
         - cmake
       host:
         - ninja
-        - python >=3.10
+        - python
         # for the moment numpy 2 is activated only for python 3.13 (numpy 1 not available on py 3.13)
         - numpy >=2.*  # [py >= 313]
         - numpy =1.*  # [py < 313]
@@ -68,8 +68,7 @@ outputs:
         - cvxpy  # [not osx or py!=313 ]
         - h5py
         - matplotlib-base
-        - pycgns-core  # [py > 39]
-        - pycgns  # [py == 39]
+        - pycgns-core
         - mumps-seq   # [not osx]
         - mumps-include   # [linux]
       run:
@@ -91,7 +90,7 @@ outputs:
         - h5py
         - matplotlib-base
         # pycngs-core only available for python 3.10+
-        - pycgns-core  # [py > 39]
+        - pycgns-core
         - mumps-seq   # [not osx]
       imports:
         - Muscat
@@ -124,7 +123,7 @@ outputs:
         - networkx >=3.0
         - mmgsuite =5.8
         - cvxpy  # [not osx or py!=313 ]
-        - pycgns-core  # [py > 39]
+        - pycgns-core
         - mumps-seq   # [not osx]
     test:
       imports:
@@ -175,7 +174,7 @@ outputs:
         - kokkos =4.7.* h*  # [linux]
         - kokkos =4.4.01 h*  # [not linux]
         - mmgsuite =5.8
-        - pycgns-core  # [py > 39]
+        - pycgns-core
         - cvxpy  # [not osx or py!=313 ]
     test:
       imports:
