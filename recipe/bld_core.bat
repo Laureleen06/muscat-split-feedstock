@@ -18,6 +18,7 @@ cmake .. -G "Ninja"                            ^
 -D CMAKE_INSTALL_INCLUDEDIR="Library/include"  ^
 -D CMAKE_INSTALL_DATAROOTDIR="Library/share"   ^
 -D CMAKE_INSTALL_PREFIX="%PREFIX%"
+-S ../superbuild/
 
 cmake                ^
   --build .          ^
