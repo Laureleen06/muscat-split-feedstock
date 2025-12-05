@@ -4,7 +4,7 @@ mkdir cmakeBuild%PY_VER%
 cd cmakeBuild%PY_VER%
 
 
-cmake .. -G "Ninja"                            ^
+cmake ../superbuild/ -G "Ninja"                ^
 -D CMAKE_BUILD_TYPE=Release                    ^
 -D CMAKE_EXPORT_COMPILE_COMMANDS:BOOL="TRUE"   ^
 -D Muscat_ENABLE_Mumps:BOOL=ON                 ^
@@ -17,14 +17,13 @@ cmake .. -G "Ninja"                            ^
 -D CMAKE_INSTALL_BINDIR="Library/bin"          ^
 -D CMAKE_INSTALL_INCLUDEDIR="Library/include"  ^
 -D CMAKE_INSTALL_DATAROOTDIR="Library/share"   ^
--D CMAKE_INSTALL_PREFIX="%PREFIX%"             ^
--S ../superbuild/
+-D CMAKE_INSTALL_PREFIX="%PREFIX%"
 
 cmake                ^
   --build .          ^
   --config Release   ^
   -j 1
 
-cmake                 ^
---install .           ^
+cmake                        ^
+--install ./Muscat-build     ^
 --config Release
